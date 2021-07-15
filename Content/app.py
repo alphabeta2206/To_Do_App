@@ -6,7 +6,7 @@ def create_app():
 
     mongo.init_app(app)
     return app
-
+mongodb+srv://abhinav:Password@10@cluster0.axu85.mongodb.net/To_Do_App?retryWrites=true&w=majority
 
 @app.route("/")
 def home():
