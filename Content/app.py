@@ -1,6 +1,12 @@
 from flask import Flask
+from models import mongo
 
-app=Flask(__name__)
+def create_app():
+    app=Flask(__name__)
+
+    mongo.init_app(app)
+    return app
+
 
 @app.route("/")
 def home():
