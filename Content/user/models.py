@@ -11,5 +11,5 @@ class User:
             "password":""
         }
 
-        return jsonify(user)
+        return jsonify(user), 200
 
