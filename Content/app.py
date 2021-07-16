@@ -1,11 +1,9 @@
-from flask import Flask
-from models import mongo
+from flask import Flask, render_template
+app = Flask(__name__)
 
-def create_app():
-    app=Flask(__name__)
+@app.route('/')
+def home():
+   return render_template('index.html')
 
-    app.config['MONGO_URI'] = 'mongodb+srv://abhinav:Password@10@cluster0.axu85.mongodb.net/To_Do_App?retryWrites=true&w=majority'
-
-    mongo.init_app(app)
-    return app
-
+if __name__ == '__main__':
+   app.run()
